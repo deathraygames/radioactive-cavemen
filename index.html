@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Radioactive Cavemen - Ludum Dare 40</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href="styles/game.css" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<script src="scripts/libs/lodash.min.js"></script>
+	<script src="scripts/libs/pixi.min.js"></script>
+	<script src="scripts/libs/astar.js"></script>
+</head>
+<body>
+
+<div id="backTitle">
+	Radioactive
+	<div>Cavemen</div>
+</div>
+
+<section id="pixi-view"></section>
+
+<div id="toolbox" class="ui">
+	<button type="button" class="digTool" data-tool="dig">
+		<i class="material-icons">highlight_off</i> Dig
+	</button>
+	<button type="button" class="buildTool" data-tool="build">
+		<!-- <i class="material-icons">build</i> --> 
+		<i class="material-icons">whatshot</i>
+		Build
+	</button>
+	<button type="button" class="infoTool" data-tool="info">
+		<i class="material-icons">search</i> Info
+	</button>
+	<button type="button" class="moveTool" data-tool="move">
+		<i class="material-icons">directions_run</i> Move
+	</button>
+	<button type="button" class="panTool" data-tool="pan">
+		<i class="material-icons">open_with</i> Pan
+	</button><a href="https://ldjam.com/events/ludum-dare/40/radioactive-cavemen" target="_blank">
+		<i class="material-icons">exit_to_app</i> LD
+	</a>
+</div>
+
+<div id="infoBox" class="ui">
+	<div id="gridPos"></div>
+	<div id="airInfo">
+		Air
+	</div>
+	<div id="terrainInfo">
+		Terrain
+		<!--
+		<button type="button" class="dig"><i class="material-icons">highlight_off</i> Dig</button>
+		-->
+	</div>
+</div>
+
+<div id="selectedPerson" class="ui">
+	<i class="material-icons">accessibility</i>
+</div>
+
+<div id="stats" class="ui">
+	<!-- population counts -->
+</div>
+
+
+<div class="scripts">
+	<script src="scripts/rocketboots/core.js"></script>
+	<!--
+	<script src="https://rocket-boots.github.io/rocket-boots/scripts/rocketboots/core.js"></script>
+	<script> RocketBoots.useGitHubScripts(); </script>
+	-->
+
+	<script src="scripts/ld40-classes.js"></script>
+	<script src="scripts/ld40-data.js"></script>
+	<script src="scripts/ld40-game.js"></script>
+	
+	<script src="http://deathraygames.com/js/ga.js"></script>
+</div>
+
+</body>
+</html>

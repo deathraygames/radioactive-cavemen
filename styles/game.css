@@ -1,0 +1,104 @@
+body {
+	background-color: #222;
+	color: rgba(150, 250, 250, 0.75);
+	font-family: 'Exo', sans-serif;
+	padding: 0;
+	margin: 0;
+	transition: all 1s;
+	text-align: center;
+	overflow: hidden;
+}
+body.moving {
+	border: solid 1px black;
+}
+
+#backTitle {
+	position: absolute;
+	line-height: 0.75em;
+	font-family: 'Exo';
+	top: 20%;
+	width: 100%;
+	z-index: 2;
+	font-size: 600%;
+	font-weight: bolder;
+	text-align: center;
+	color: rgba(29,15,63,0.4);
+	opacity: 1;
+	user-select: none;
+}
+#backTitle > div {
+	font-size: 80%;
+}
+
+#pixi-view {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	border: solid 1px rgba(0,0,0,0.5);
+	background: radial-gradient(circle at center, #fff 0, #C3DCB9, #3E184F 100%);
+}
+
+.ui {
+	display: none;
+	position: absolute;
+	z-index: 2;
+	padding: 0.5em 1em;
+	min-height: 1em;
+	min-width: 2em;
+	/*
+	background-color: rgba(255,255,255,0.25);
+	color: #333;
+	*/
+	background: rgba(29,15,63,0.2); /* #1D0F3F; */
+	color: #D8EED8;
+	text-shadow: 1px 2px 0.1em rgba(0,0,0,0.5)
+	border-radius: 1em;	
+}
+.ui a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.5em;
+}
+
+#selectedPerson {
+	top: 0.5em;
+	left: 20%;
+	margin-left: 4em;
+}
+
+#toolbox {
+	right: 0.5em;
+	top: 0.5em;
+	display: block;
+}
+
+#stats {
+	top: 0.5em;
+	left: 0.5em;
+}
+
+a i.material-icons,
+button i.material-icons {
+	display: block;
+}
+
+.selected {
+	background: #1D0F3F;
+	color: #D8EED8;
+	border: solid 1px #3E184F;
+}
+
+button {
+	display: inline-block;
+	background: #BECDA2;
+	color: #5F235C;
+	border: solid 1px #B49F72;
+	padding: 0.5em;
+	min-width: 4em;
+	font-size: 120%;
+	outline: none;
+	cursor: pointer;
+}
