@@ -277,7 +277,7 @@ class Person {
 		}
 		const stepDistance = delta * (this.speed / 5);
 		this.fatigue(stepDistance);
-		const distance = pos.getDistance(nextPos);
+		const distance = Math.ceil(pos.getDistance(nextPos));
 		if (distance < stepDistance) {
 			this.sprite.x = nextPos.x;
 			this.sprite.y = nextPos.y;
@@ -296,6 +296,8 @@ class Person {
 			this.sprite.x += nextPosUnit.x;
 			this.sprite.y += nextPosUnit.y + bopY;
 		}
+		this.sprite.x = Math.round(this.sprite.x);
+		this.sprite.y = Math.round(this.sprite.y);
 		this.sprite.texture = this.textures.walking;
 	}
 	stop() {

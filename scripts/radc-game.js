@@ -80,8 +80,11 @@ RocketBoots.loadComponents([
 	const app = new PIXI.Application({
 		width: $window.width(),
 		height: $window.height(),
-		transparent: true
+		transparent: true,
+		antialias: false,
+		roundPixels: true
 	});
+	PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 	canvasElt.appendChild(app.view);
 
 	g.immigrationCooldown = IMMIGRATION_COOL;
@@ -213,7 +216,6 @@ RocketBoots.loadComponents([
 		_.remove(g.snow, (snow) => { return snow.alpha <= 0; });
 
 		if (g.tick % 360 === 0) {
-			console.log("refresh", g.tick, g.tick % 360)
 			refreshStatsUI();
 		}
 		if (g.tick % 10 === 0) {

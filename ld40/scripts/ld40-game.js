@@ -213,7 +213,6 @@ RocketBoots.loadComponents([
 		_.remove(g.snow, (snow) => { return snow.alpha <= 0; });
 
 		if (g.tick % 360 === 0) {
-			console.log("refresh", g.tick, g.tick % 360)
 			refreshStatsUI();
 		}
 		if (g.tick % 10 === 0) {
